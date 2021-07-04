@@ -11,7 +11,9 @@ article {
   grid-auto-columns: auto;
   grid-auto-rows: auto;
   width: 100%;
-  grid-template-columns: 30% 30% 30%;
+  // grid-template-columns: 31% 31% 31%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
   column-gap: 10px;
   row-gap: 15px;
 }

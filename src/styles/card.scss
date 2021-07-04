@@ -1,25 +1,42 @@
-.repo-card{
-    background: #fff;
-    /* max-width: 260px; */
-    padding: 10px;
-    box-shadow: 0px 2px 4px -1px #9c9c9c, 0px 4px 5px 0px #ffffff, 0px 1px 10px 0px #cccccc;
-    border-radius: 4px;
+.repo-card {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px 2px 4px -1px #9c9c9c, 0px 4px 5px 0px #ffffff,
+    0px 1px 10px 0px #cccccc;
+  border-radius: 4px;
+  margin: 0;
+  .link {
+    text-decoration: none;
+    color: #4c4c4c;
   }
+}
 
-  .repo-card-header p{
+.repo-card-header {
+  p {
     font-size: 12px;
     margin: 0;
   }
-  .repo-card-body {
-    padding: 10px 0;
+  h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 6px 0;
   }
-  .repo-card-body p{
+}
+.repo-card-body {
+  padding: 10px 0;
+}
+.repo-card-body {
+  p {
     margin: 0;
   }
-  .repo-card-footer{
-    display: flex;
-    justify-content: space-between; 
-  }
-  .repo-card-footer p{ 
+}
+.repo-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.repo-card-footer {
+  p {
     font-size: 12px;
   }
+}
