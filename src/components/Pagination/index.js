@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button";
+import '../../styles/pagination.scss';
 
 function Pagination() {
   return (

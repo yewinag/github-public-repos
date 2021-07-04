@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/section-header.scss';
 
 function SectionHeader() {
     return (

@@ -1,0 +1,31 @@
+article {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+
+.table-container {
+  display: inline-grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  width: 100%;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.container-header h3 {
+  margin: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .table-container {
+    grid-template-columns: 100%;
+  }
+}
