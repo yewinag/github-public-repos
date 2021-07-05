@@ -7,14 +7,16 @@
   margin: 0;
   .link {
     text-decoration: none;
-    color: #4c4c4c;
+    color: #000000;
   }
 }
 
 .repo-card-header {
+  padding: 10px 0;
   p {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
+    color: #c4c4c4;
   }
   h5 {
     font-size: 18px;
@@ -24,19 +26,31 @@
 }
 .repo-card-body {
   padding: 10px 0;
-}
-.repo-card-body {
-  p {
+  .desc {
+    min-height: 100px;
+  }
+  .updated-date{
+    padding: 10px 0;
+    .label{
+      color: #c4c4c4;
+      font-size: 13px;
+    }
+  }
+  p{
     margin: 0;
   }
 }
 .repo-card-footer {
   display: flex;
-  justify-content: space-between;
   align-content: space-between;
-}
-.repo-card-footer {
-  p {
-    font-size: 12px;
+  padding: 10px 0;
+  .tag-btn{
+    color: #414AC2;
+    background-color: #DADDFB;
+    border: 1px solid #414AC2;
+    padding: 4px 9px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-right: 6px;
   }
 }

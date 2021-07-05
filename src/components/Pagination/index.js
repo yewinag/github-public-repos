@@ -8,7 +8,6 @@ import "../../styles/pagination.scss";
 
 function Pagination({ repos, shouldFetchRepo, shouldPaginate }) {
   const handleNextPageFetch = () => {   
-    console.log(Math.floor(repos.total / (repos.page + 1))) 
     if(Math.floor(repos.total / (repos.page + 1)) < 10){
       shouldFetchRepo(repos.data[repos.data.length - 1].id)
     }else{

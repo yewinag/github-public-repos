@@ -6,8 +6,9 @@ import Header from "../../components/Header";
 import Table from "../../components/Table";
 
 import { shouldFetchRepo } from "../../actions/repoActions";
+import Spinner from "../../components/Spinner";
 
-function Home({repos, shouldFetchRepo}) {
+function Home({ repos, shouldFetchRepo }) {
   useEffect(() => {
     shouldFetchRepo(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -15,7 +16,9 @@ function Home({repos, shouldFetchRepo}) {
   return (
     <>
       <Header />
-      {repos.isFetching ? <div>loading....</div> : <Table />}
+      <section>
+      {repos.isFetching ? <Spinner /> : <Table />}            
+      </section>
       <Footer />
     </>
   );

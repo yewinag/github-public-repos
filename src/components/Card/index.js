@@ -40,16 +40,19 @@ function Card({ item: { name, full_name, description, url } }) {
       <a href={detail && detail.html_url} target="_blank" className="link" rel="noreferrer">
         <div className="repo-card-header">
           <h5>{name}</h5>
-          <p>{full_name}</p>          
-          <p>Last updated {getUpdatedDate()}</p>
+          <p>{full_name}</p>                    
         </div>
         <div className="repo-card-body">
-          <p>{description}</p>
+          <p className="desc">{description}</p>
+          <div className="updated-date">
+          <p className="label">Last updated </p>
+          <p>{getUpdatedDate()}</p>
+          </div>
         </div>
         <div className="repo-card-footer">
-          <p>{getLanguage()}</p>
-          <p>{getStars()}</p>
-          <p>{getLicence()}</p>
+          <button className="tag-btn">{getLanguage()}</button>
+          <button className="tag-btn">{getStars()}</button>
+          <button className="tag-btn">{getLicence()}</button>
         </div>
       </a>
     </article>
