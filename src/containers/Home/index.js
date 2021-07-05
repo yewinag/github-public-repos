@@ -7,14 +7,15 @@ import Table from "../../components/Table";
 
 import { shouldFetchRepo } from "../../actions/repoActions";
 
-function Home(props) {
+function Home({repos, shouldFetchRepo}) {
   useEffect(() => {
-    props.shouldFetchRepo(0);
+    shouldFetchRepo(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, ["fetchRepo"]);
   return (
     <>
       <Header />
-      {props.repos.isFetching ? <div>loading....</div> : <Table />}
+      {repos.isFetching ? <div>loading....</div> : <Table />}
       <Footer />
     </>
   );

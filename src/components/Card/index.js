@@ -36,13 +36,11 @@ function Card({ item: { name, full_name, description, url } }) {
     );
 
   return (
-      <article className="repo-card">
-    {/* <a href={detail && detail.html_url} target="_blank" className="link"> */}
+    <article className="repo-card">
+      <a href={detail && detail.html_url} target="_blank" className="link" rel="noreferrer">
         <div className="repo-card-header">
           <h5>{name}</h5>
-          <a href={detail && detail.html_url} target="_blank">
-            {full_name}
-          </a>
+          <p>{full_name}</p>          
           <p>Last updated {getUpdatedDate()}</p>
         </div>
         <div className="repo-card-body">
@@ -53,8 +51,8 @@ function Card({ item: { name, full_name, description, url } }) {
           <p>{getStars()}</p>
           <p>{getLicence()}</p>
         </div>
-    {/* </a> */}
-      </article>
+      </a>
+    </article>
   );
 }
 
