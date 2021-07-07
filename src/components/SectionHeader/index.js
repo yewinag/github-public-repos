@@ -1,10 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import '../../styles/section-header.scss';
 
-function SectionHeader() {
+function SectionHeader(props) {
+    const getFetchedRepo = () => props.repos.data.length
     return (
         <div className="container-header">
-            <h3>37 repositories</h3>
+            <h3> {getFetchedRepo()} repositories</h3>
             <div>
                 <button>Gallery</button>
                 <button>List</button>
@@ -13,4 +15,9 @@ function SectionHeader() {
     )
 }
 
-export default SectionHeader
+const mapStateToProps = (state) => {
+    return {
+        repos: state.repos
+    }
+}
+export default connect(mapStateToProps, null)(SectionHeader);

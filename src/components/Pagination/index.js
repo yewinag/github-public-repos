@@ -8,11 +8,14 @@ import "../../styles/pagination.scss";
 
 function Pagination({ repos, shouldFetchRepo, shouldPaginate }) {
   const handleNextPageFetch = () => {   
-    if(Math.floor(repos.total / (repos.page + 1)) < 10){
-      shouldFetchRepo(repos.data[repos.data.length - 1].id)
+    if(Math.floor(repos.total / (repos.page + 1)) < 10){ // check the list item
+      shouldFetchRepo(repos.data[repos.data.length - 1].id) // should fetch new data
     }else{
       shouldPaginate(repos.page + 1)
     }
+  }
+  const handlePrevPageFetch = () => {
+
   }
   return (
     <div className="paginate-layout">

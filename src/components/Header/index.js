@@ -1,9 +1,12 @@
 import React from "react";
-import '../../styles/header.scss'
+import { Link } from "react-router-dom";
+import "../../styles/header.scss";
 function Header() {
   return (
     <header>
-      <h3>GitHub Repositories</h3>
+      <Link to="/">
+        <h3>GitHub Repositories</h3>
+      </Link>
       <button className="add-new">Create New</button>
     </header>
   );
